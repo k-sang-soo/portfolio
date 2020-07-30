@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/**********************초기화 코드 *****************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 1920px;
+  height: 100%;
+  padding: 0 3.15rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/************************* 변수 ***********************/
+header {
+  padding-top: 1rem;
+}
+
+header .logo {
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+header nav {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=default.css.map */
