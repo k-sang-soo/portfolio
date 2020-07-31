@@ -14,8 +14,13 @@ html {
 }
 
 body {
-  width: 1920px;
+  width: 100%;
   height: 100%;
+}
+
+header,
+.main,
+footer {
   padding: 0 3.15rem;
 }
 
@@ -28,8 +33,18 @@ a {
 }
 
 /************************* 변수 ***********************/
+/******************* HEADER *************************/
 header {
   padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 header .logo {
@@ -37,8 +52,103 @@ header .logo {
   font-size: 1.6rem;
 }
 
-header nav {
+header .nav {
   font-weight: 700;
   font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+header .nav li {
+  padding: 0 1.95rem 0 1.95rem;
+  cursor: pointer;
+}
+
+header .nav li:last-child {
+  padding-right: 1rem;
+}
+
+/******************* MAIN *************************/
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ff5851;
+  padding-right: 0;
+}
+
+.main .main-title {
+  width: 50%;
+  max-height: 100vh;
+  margin-top: 12rem;
+}
+
+.main .main-title p:nth-child(1) {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.main .main-title p:nth-child(2) {
+  font-size: 0.9rem;
+}
+
+.main .main-img {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main .scroll-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f8f8f8;
+  position: absolute;
+  left: 50%;
+  bottom: 68px;
+  -webkit-transform: translate(-20%) rotate(270deg);
+          transform: translate(-20%) rotate(270deg);
+}
+
+.main .fa-arrow-down {
+  color: #f8f8f8;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translate(60%);
+          transform: translate(60%);
+  -webkit-animation: arrow-down 1s infinite linear;
+          animation: arrow-down 1s infinite linear;
+}
+
+@-webkit-keyframes arrow-down {
+  form {
+    bottom: 20px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes arrow-down {
+  form {
+    bottom: 20px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+/******************* ABOUT *************************/
+/******************* PROJECTS *************************/
+/******************* CONTACT , FOOTER *************************/
 /*# sourceMappingURL=default.css.map */
