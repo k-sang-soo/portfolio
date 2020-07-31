@@ -9,7 +9,6 @@
 }
 
 html {
-  font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -21,7 +20,7 @@ body {
 header,
 .main,
 footer {
-  padding: 0 3.15rem;
+  padding: 0 63px;
 }
 
 ul {
@@ -35,7 +34,7 @@ a {
 /************************* 변수 ***********************/
 /******************* HEADER *************************/
 header {
-  padding-top: 1rem;
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,26 +48,31 @@ header {
 
 header .logo {
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 32px;
 }
 
 header .nav {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 header .nav li {
-  padding: 0 1.95rem 0 1.95rem;
+  padding: 0 2.1666em 0 2.1666em;
   cursor: pointer;
 }
 
 header .nav li:last-child {
-  padding-right: 1rem;
+  padding-right: 20px;
 }
 
+header .nav-icon {
+  display: none;
+}
+
+/******************* HEADER 끝*************************/
 /******************* MAIN *************************/
 .main {
   display: -webkit-box;
@@ -81,21 +85,44 @@ header .nav li:last-child {
 .main .main-title {
   width: 50%;
   max-height: 100vh;
-  margin-top: 12rem;
+  padding-top: 240px;
+  z-index: 99;
+  position: relative;
 }
 
 .main .main-title p:nth-child(1) {
-  font-size: 3.6rem;
+  font-size: 72px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .main .main-title p:nth-child(2) {
-  font-size: 0.9rem;
+  font-size: 18px;
+}
+
+.main .main-title .scroll-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f8f8f8;
+  position: absolute;
+  right: -15px;
+  bottom: 68px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.main .main-title .fa-arrow-down {
+  color: #f8f8f8;
+  position: absolute;
+  right: 8px;
+  bottom: 20px;
+  -webkit-animation: arrow-down 1s infinite linear;
+          animation: arrow-down 1s infinite linear;
 }
 
 .main .main-img {
   width: 50%;
-  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,28 +133,6 @@ header .nav li:last-child {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-
-.main .scroll-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #f8f8f8;
-  position: absolute;
-  left: 50%;
-  bottom: 68px;
-  -webkit-transform: translate(-20%) rotate(270deg);
-          transform: translate(-20%) rotate(270deg);
-}
-
-.main .fa-arrow-down {
-  color: #f8f8f8;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  -webkit-transform: translate(60%);
-          transform: translate(60%);
-  -webkit-animation: arrow-down 1s infinite linear;
-          animation: arrow-down 1s infinite linear;
 }
 
 @-webkit-keyframes arrow-down {
@@ -148,7 +153,168 @@ header .nav li:last-child {
   }
 }
 
+/******************* MAIN 끝*************************/
 /******************* ABOUT *************************/
 /******************* PROJECTS *************************/
 /******************* CONTACT , FOOTER *************************/
+/******************* 반응형 1280px *************************/
+@media screen and (max-width: 1280px) {
+  header,
+  .main,
+  footer {
+    padding: 0 28px;
+  }
+  /******************* HEADER *************************/
+  header {
+    padding-top: 28px;
+  }
+  header .nav {
+    font-size: 16px;
+  }
+  header .nav li {
+    padding: 0 1.08em 0 1.08em;
+  }
+  header .nav li:last-child {
+    padding-right: 3px;
+  }
+  .main {
+    padding-right: 0;
+  }
+}
+
+/******************* 반응형 768px *************************/
+@media screen and (max-width: 768px) {
+  header,
+  .main,
+  footer {
+    padding: 0 24px;
+  }
+  /******************* HEADER *************************/
+  header {
+    position: absolute;
+    width: 100%;
+    padding-top: 24px;
+  }
+  header .logo {
+    font-size: 24px;
+  }
+  header .nav li {
+    font-size: 15px;
+  }
+  .main {
+    padding-right: 0;
+  }
+  .main .main-title {
+    padding-top: 185px;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 64px;
+  }
+  .main .main-title span {
+    color: #ff5851;
+  }
+  .main .main-title .scroll-title {
+    font-size: 16px;
+    right: -5px;
+  }
+  .main .main-title .fa-arrow-down {
+    font-size: 16px;
+  }
+  .main .main-img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/******************* 모바일 반응형 480px *************************/
+@media screen and (max-width: 480px) {
+  header,
+  footer {
+    padding: 0 20px;
+  }
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 20px;
+  }
+  header .logo {
+    font-size: 16px;
+    z-index: 999;
+  }
+  header .nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 161px;
+    background: #f8f8f8;
+    z-index: 998;
+    display: block;
+  }
+  header .nav li {
+    font-size: 32px;
+    padding: 0 0 16px 20px;
+  }
+  header .nav-icon {
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .nav-icon div {
+    background: #f8f8f8;
+  }
+  header .nav-icon .icon-1 {
+    width: 26px;
+    height: 3px;
+  }
+  header .nav-icon .icon-2 {
+    width: 18px;
+    height: 3px;
+  }
+  header .nav-icon .icon-3 {
+    width: 10px;
+    height: 3px;
+  }
+  .main {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .main-title {
+    width: 100%;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 30px;
+  }
+  .main .main-title p:nth-child(2) {
+    font-size: 12px;
+  }
+  .main .main-title span {
+    color: #1c1b20;
+  }
+  .main .main-img {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=default.css.map */
