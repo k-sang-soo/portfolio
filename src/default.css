@@ -58,6 +58,7 @@ header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
 }
 
 header .nav li {
@@ -199,6 +200,8 @@ header .nav-icon {
       grid-template-areas: ". . .";
   grid-gap: 0 30px;
   text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .about .ability > div {
@@ -262,7 +265,7 @@ header .nav-icon {
 /******************* PROJECTS *************************/
 /******************* CONTACT , FOOTER *************************/
 /******************* 반응형 1280px *************************/
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1919px) {
   header,
   .main,
   footer {
