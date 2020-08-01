@@ -160,6 +160,101 @@ header .nav-icon {
 
 /******************* MAIN 끝*************************/
 /******************* ABOUT *************************/
+.about {
+  padding: 0 63px;
+  background: #f8f8f8;
+}
+
+.about .information {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.about .information .about-title {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ff5851;
+}
+
+.about .information .about-title::after {
+  content: "";
+  display: block;
+  width: 208px;
+  height: 5px;
+  margin: 25px auto;
+  background: #ff5851;
+}
+
+.about .information .about-me {
+  font-size: 24px;
+}
+
+.about .information .about-me li {
+  padding-bottom: 16px;
+}
+
+.about .ability {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". . .";
+  grid-gap: 0 30px;
+  text-align: center;
+}
+
+.about .ability > div {
+  width: 578px;
+  height: 732px;
+  background: #f8f8f8;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+}
+
+.about .ability .ability-iconbox {
+  width: 274px;
+  height: 274px;
+  margin: 32px auto;
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f8f8f8;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.about .ability .design-list,
+.about .ability .publisher-list,
+.about .ability .education-list {
+  font-size: 24px;
+}
+
+.about .ability .design-list li,
+.about .ability .publisher-list li,
+.about .ability .education-list li {
+  padding-bottom: 16px;
+}
+
+.about .ability ul .ability-sub {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 32px;
+}
+
+.about .ability .education-list .small-writing {
+  font-size: 16px;
+}
+
+.about .ability .education-list .small-writing:nth-of-type(4) {
+  padding-bottom: 32px;
+}
+
 /******************* PROJECTS *************************/
 /******************* CONTACT , FOOTER *************************/
 /******************* 반응형 1280px *************************/

@@ -135,6 +135,91 @@ header {
 
 /******************* ABOUT *************************/
 
+.about {
+  padding: 0 63px;
+  background: $white-color;
+  & .information {
+    text-align: center;
+    padding: 100px 0;
+
+    & .about-title {
+      font-size: 72px;
+      font-weight: 900;
+      color: $coral-color;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 208px;
+        height: 5px;
+        margin: 25px auto;
+        background: #ff5851;
+      }
+    }
+
+    & .about-me {
+      font-size: 24px;
+
+      & li {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  & .ability {
+    display: grid;
+    grid-template-areas: ". . .";
+    grid-gap: 0 30px;
+    text-align: center;
+
+    & > div {
+      width: 578px;
+      height: 732px;
+      background: $white-color;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+    }
+
+    & .ability-iconbox {
+      width: 274px;
+      height: 274px;
+      margin: 32px auto;
+      font-size: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white-color;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    & .design-list,
+    .publisher-list,
+    .education-list {
+      font-size: 24px;
+
+      & li {
+        padding-bottom: 16px;
+      }
+    }
+    & ul {
+      & .ability-sub {
+        font-size: 40px;
+        font-weight: 700;
+        padding-bottom: 32px;
+      }
+    }
+
+    & .education-list {
+      & .small-writing {
+        font-size: 16px;
+        &:nth-of-type(4) {
+          padding-bottom: 32px;
+        }
+      }
+    }
+  }
+}
+
 /******************* PROJECTS *************************/
 
 /******************* CONTACT , FOOTER *************************/
