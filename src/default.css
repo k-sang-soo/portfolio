@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/************************* 변수 ***********************/
 /**********************초기화 코드 *****************/
 * {
   margin: 0;
@@ -10,6 +11,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  color: #1c1b20;
 }
 
 body {
@@ -31,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-/************************* 변수 ***********************/
 /******************* HEADER *************************/
 header {
   padding-top: 20px;
@@ -64,8 +65,12 @@ header .nav li {
   cursor: pointer;
 }
 
-header .nav li:last-child {
+header .nav li:nth-child(3) {
   padding-right: 20px;
+}
+
+header .nav .responsive {
+  display: none;
 }
 
 header .nav-icon {
@@ -174,7 +179,7 @@ header .nav-icon {
   header .nav li {
     padding: 0 1.08em 0 1.08em;
   }
-  header .nav li:last-child {
+  header .nav li:nth-child(3) {
     padding-right: 3px;
   }
   .main {
@@ -241,7 +246,6 @@ header .nav-icon {
   }
   header .logo {
     font-size: 16px;
-    z-index: 999;
   }
   header .nav {
     position: fixed;
@@ -252,44 +256,87 @@ header .nav-icon {
     height: 100vh;
     padding-top: 161px;
     background: #f8f8f8;
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+    -webkit-transition: all 500ms cubic-bezier(0.545, 0.005, 0.945, 0.585);
+    transition: all 500ms cubic-bezier(0.545, 0.005, 0.945, 0.585);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     z-index: 998;
-    display: block;
   }
   header .nav li {
     font-size: 32px;
     padding: 0 0 16px 20px;
   }
+  header .nav li:nth-of-type(4) {
+    padding-top: 15.2em;
+  }
+  header .nav li.responsive {
+    display: block;
+    font-size: 14px;
+  }
+  header .nav li.responsive i.fa-github {
+    font-size: 20px;
+    padding: 0.25rem;
+    color: #1c1b20;
+  }
+  header .nav.nav-view {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
   header .nav-icon {
-    width: 30px;
-    height: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
   }
-  header .nav-icon div {
-    background: #f8f8f8;
+  header .nav-icon .icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  header .nav-icon .icon-1 {
+  header .nav-icon .icons div {
+    background: #1c1b20;
+    margin-bottom: 2px;
+  }
+  header .nav-icon .icons .icon-1 {
     width: 26px;
     height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
   }
-  header .nav-icon .icon-2 {
+  header .nav-icon .icons .icon-1.nav-view-ani {
+    -webkit-transform: rotate(45deg) translate(20%, 150%);
+            transform: rotate(45deg) translate(20%, 150%);
+  }
+  header .nav-icon .icons .icon-2 {
     width: 18px;
     height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
   }
-  header .nav-icon .icon-3 {
+  header .nav-icon .icons .icon-2.nav-view-ani {
+    width: 0;
+  }
+  header .nav-icon .icons .icon-3 {
     width: 10px;
     height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  header .nav-icon .icons .icon-3.nav-view-ani {
+    width: 26px;
+    -webkit-transform: rotate(-45deg) translate(10%, -50%);
+            transform: rotate(-45deg) translate(10%, -50%);
   }
   .main {
     padding: 0;
