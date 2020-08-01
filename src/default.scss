@@ -140,7 +140,7 @@ header {
   background: $white-color;
   & .information {
     text-align: center;
-    padding: 100px 0;
+    padding: 200px 0;
 
     & .about-title {
       font-size: 72px;
@@ -174,16 +174,16 @@ header {
 
     & > div {
       width: 578px;
-      height: 732px;
+      padding: 64px 0;
       background: $white-color;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
     }
 
     & .ability-iconbox {
-      width: 274px;
-      height: 274px;
-      margin: 32px auto;
-      font-size: 60px;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+      font-size: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -202,6 +202,7 @@ header {
       }
     }
     & ul {
+      padding-top: 32px;
       & .ability-sub {
         font-size: 40px;
         font-weight: 700;
@@ -236,6 +237,10 @@ header {
   header {
     padding-top: 28px;
 
+    & .logo {
+      font-size: 28px;
+    }
+
     & .nav {
       font-size: 16px;
 
@@ -251,6 +256,79 @@ header {
 
   .main {
     padding-right: 0;
+
+    & .main-title {
+      & p:nth-child(1) {
+        font-size: 56px;
+      }
+      .scroll-title {
+        font-size: 20px;
+        right: -12px;
+      }
+    }
+
+    & .main-img {
+      background: #fff;
+
+      & img {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  .about {
+    padding: 0 28px;
+
+    & .information {
+      padding: 160px 0;
+
+      & .about-title {
+        font-size: 56px;
+      }
+
+      & .about-me {
+        font-size: 20px;
+      }
+    }
+
+    & .ability {
+      grid-gap: 0 25px;
+
+      & div {
+        width: 392px;
+      }
+
+      & .ability-iconbox {
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+      }
+
+      & .design-list,
+      .publisher-list,
+      .education-list {
+        font-size: 16px;
+
+        & li {
+          padding-bottom: 8px;
+        }
+      }
+
+      & ul {
+        & .ability-sub {
+          font-size: 27px;
+        }
+      }
+
+      & .education-list {
+        & .small-writing {
+          font-size: 12px;
+          &:nth-of-type(4) {
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
   }
 }
 

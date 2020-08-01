@@ -167,7 +167,7 @@ header .nav-icon {
 
 .about .information {
   text-align: center;
-  padding: 100px 0;
+  padding: 200px 0;
 }
 
 .about .information .about-title {
@@ -203,17 +203,17 @@ header .nav-icon {
 
 .about .ability > div {
   width: 578px;
-  height: 732px;
+  padding: 64px 0;
   background: #f8f8f8;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
 }
 
 .about .ability .ability-iconbox {
-  width: 274px;
-  height: 274px;
-  margin: 32px auto;
-  font-size: 60px;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  font-size: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +239,10 @@ header .nav-icon {
 .about .ability .publisher-list li,
 .about .ability .education-list li {
   padding-bottom: 16px;
+}
+
+.about .ability ul {
+  padding-top: 32px;
 }
 
 .about .ability ul .ability-sub {
@@ -268,6 +272,9 @@ header .nav-icon {
   header {
     padding-top: 28px;
   }
+  header .logo {
+    font-size: 28px;
+  }
   header .nav {
     font-size: 16px;
   }
@@ -279,6 +286,61 @@ header .nav-icon {
   }
   .main {
     padding-right: 0;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 56px;
+  }
+  .main .main-title .scroll-title {
+    font-size: 20px;
+    right: -12px;
+  }
+  .main .main-img {
+    background: #fff;
+  }
+  .main .main-img img {
+    opacity: 0.85;
+  }
+  .about {
+    padding: 0 28px;
+  }
+  .about .information {
+    padding: 160px 0;
+  }
+  .about .information .about-title {
+    font-size: 56px;
+  }
+  .about .information .about-me {
+    font-size: 20px;
+  }
+  .about .ability {
+    grid-gap: 0 25px;
+  }
+  .about .ability div {
+    width: 392px;
+  }
+  .about .ability .ability-iconbox {
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 16px;
+  }
+  .about .ability .design-list li,
+  .about .ability .publisher-list li,
+  .about .ability .education-list li {
+    padding-bottom: 8px;
+  }
+  .about .ability ul .ability-sub {
+    font-size: 27px;
+  }
+  .about .ability .education-list .small-writing {
+    font-size: 12px;
+  }
+  .about .ability .education-list .small-writing:nth-of-type(4) {
+    padding-bottom: 24px;
   }
 }
 
