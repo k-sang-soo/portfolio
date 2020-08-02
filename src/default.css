@@ -197,16 +197,16 @@ header .nav-icon {
 .about .ability {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . .";
-  grid-gap: 0 30px;
+  -ms-grid-columns: (minmax(208px, 578px))[3];
+      grid-template-columns: repeat(3, minmax(208px, 578px));
+  gap: 0 30px;
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .about .ability > div {
-  width: 578px;
-  padding: 64px 0;
+  padding: 64px 8px;
   background: #f8f8f8;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
@@ -316,10 +316,9 @@ header .nav-icon {
     font-size: 20px;
   }
   .about .ability {
-    grid-gap: 0 25px;
-  }
-  .about .ability div {
-    width: 392px;
+    -ms-grid-columns: (minmax(208px, 392px))[3];
+        grid-template-columns: repeat(3, minmax(208px, 392px));
+    gap: 0 25px;
   }
   .about .ability .ability-iconbox {
     width: 120px;
@@ -329,7 +328,7 @@ header .nav-icon {
   .about .ability .design-list,
   .about .ability .publisher-list,
   .about .ability .education-list {
-    font-size: 16px;
+    font-size: 18px;
   }
   .about .ability .design-list li,
   .about .ability .publisher-list li,
@@ -337,10 +336,10 @@ header .nav-icon {
     padding-bottom: 8px;
   }
   .about .ability ul .ability-sub {
-    font-size: 27px;
+    font-size: 28px;
   }
   .about .ability .education-list .small-writing {
-    font-size: 12px;
+    font-size: 14px;
   }
   .about .ability .education-list .small-writing:nth-of-type(4) {
     padding-bottom: 24px;

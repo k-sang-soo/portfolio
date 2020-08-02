@@ -169,14 +169,13 @@ header {
 
   & .ability {
     display: grid;
-    grid-template-areas: ". . .";
-    grid-gap: 0 30px;
+    grid-template-columns: repeat(3, minmax(208px, 578px));
+    gap: 0 30px;
     text-align: center;
     justify-content: space-around;
 
     & > div {
-      width: 578px;
-      padding: 64px 0;
+      padding: 64px 8px;
       background: $white-color;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
     }
@@ -294,11 +293,8 @@ header {
     }
 
     & .ability {
-      grid-gap: 0 25px;
-
-      & div {
-        width: 392px;
-      }
+      grid-template-columns: repeat(3, minmax(208px, 392px));
+      gap: 0 25px;
 
       & .ability-iconbox {
         width: 120px;
@@ -309,7 +305,7 @@ header {
       & .design-list,
       .publisher-list,
       .education-list {
-        font-size: 16px;
+        font-size: 18px;
 
         & li {
           padding-bottom: 8px;
@@ -318,13 +314,13 @@ header {
 
       & ul {
         & .ability-sub {
-          font-size: 27px;
+          font-size: 28px;
         }
       }
 
       & .education-list {
         & .small-writing {
-          font-size: 12px;
+          font-size: 14px;
           &:nth-of-type(4) {
             padding-bottom: 24px;
           }
