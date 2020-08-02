@@ -389,6 +389,49 @@ header .nav-icon {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .about {
+    padding: 0 24px;
+  }
+  .about .information {
+    padding: 140px 0;
+  }
+  .about .information .about-title {
+    font-size: 48px;
+  }
+  .about .information .about-title::after {
+    width: 160px;
+    height: 3px;
+    margin: 20px auto;
+  }
+  .about .information .about-me {
+    font-size: 18px;
+  }
+  .about .ability {
+    -ms-grid-columns: (minmax(208px, 232px))[3];
+        grid-template-columns: repeat(3, minmax(208px, 232px));
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 14px;
+    padding-top: 24px;
+  }
+  .about .ability .design-list .ability-sub,
+  .about .ability .publisher-list .ability-sub,
+  .about .ability .education-list .ability-sub {
+    font-size: 22px;
+  }
+  .about .ability > div {
+    padding: 24px 8px;
+  }
+  .about .ability .ability-iconbox {
+    width: 90px;
+    height: 90px;
+    font-size: 24px;
+  }
+  .about .ability .education-list .small-writing {
+    font-size: 8px;
+  }
 }
 
 /******************* 모바일 반응형 480px *************************/
@@ -521,6 +564,28 @@ header .nav-icon {
   }
   .main .main-img {
     width: 100%;
+  }
+  .about {
+    padding: 20px 0;
+  }
+  .about .information {
+    padding: 120px 0;
+  }
+  .about .information .about-title {
+    font-size: 32px;
+  }
+  .about .information .about-title::after {
+    width: 100px;
+    height: 2px;
+    margin: 12px auto;
+  }
+  .about .information .about-me {
+    font-size: 15px;
+  }
+  .about .ability {
+    -ms-grid-columns: (minmax(208px, 232px))[1];
+        grid-template-columns: repeat(1, minmax(208px, 232px));
+    gap: 56px 0;
   }
 }
 /*# sourceMappingURL=default.css.map */

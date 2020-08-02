@@ -382,6 +382,57 @@ header {
       }
     }
   }
+
+  .about {
+    padding: 0 24px;
+
+    & .information {
+      padding: 140px 0;
+      & .about-title {
+        font-size: 48px;
+        &::after {
+          width: 160px;
+          height: 3px;
+          margin: 20px auto;
+        }
+      }
+
+      & .about-me {
+        font-size: 18px;
+      }
+    }
+
+    & .ability {
+      grid-template-columns: repeat(3, minmax(208px, 232px));
+
+      & .design-list,
+      .publisher-list,
+      .education-list {
+        font-size: 14px;
+        padding-top: 24px;
+
+        & .ability-sub {
+          font-size: 22px;
+        }
+      }
+
+      & > div {
+        padding: 24px 8px;
+      }
+
+      & .ability-iconbox {
+        width: 90px;
+        height: 90px;
+        font-size: 24px;
+      }
+
+      & .education-list {
+        & .small-writing {
+          font-size: 8px;
+        }
+      }
+    }
+  }
 }
 
 /******************* 모바일 반응형 480px *************************/
@@ -516,6 +567,31 @@ header {
 
     & .main-img {
       width: 100%;
+    }
+  }
+
+  & .about {
+    padding: 20px 0;
+    & .information {
+      padding: 120px 0;
+
+      & .about-title {
+        font-size: 32px;
+        &::after {
+          width: 100px;
+          height: 2px;
+          margin: 12px auto;
+        }
+      }
+
+      & .about-me {
+        font-size: 15px;
+      }
+    }
+
+    & .ability {
+      grid-template-columns: repeat(1, minmax(208px, 232px));
+      gap: 56px 0;
     }
   }
 }
