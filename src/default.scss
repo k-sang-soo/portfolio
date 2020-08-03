@@ -2,6 +2,8 @@
 $black-color: #1c1b20;
 $coral-color: #ff5851;
 $white-color: #f8f8f8;
+$darkBlue-color: #414a6b;
+$gray-color: #c1c1c1;
 
 /**********************초기화 코드 *****************/
 * {
@@ -147,6 +149,7 @@ header {
       font-size: 72px;
       font-weight: 900;
       color: $coral-color;
+      letter-spacing: 0.12em;
 
       &::after {
         content: "";
@@ -223,6 +226,80 @@ header {
 }
 
 /******************* PROJECTS *************************/
+.projects {
+  padding: 200px 63px;
+  background: $white-color;
+  & .projects-title {
+    font-size: 72px;
+    font-weight: 900;
+    color: $darkBlue-color;
+    letter-spacing: 0.12em;
+    padding-bottom: 64px;
+    text-align: center;
+  }
+
+  & .projects-list {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: $gray-color;
+    }
+
+    & .projects-item {
+      position: relative;
+      & .projects-item_preview {
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        & a {
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+        }
+
+        & .item-right {
+          float: right;
+        }
+
+        & .item-left {
+          float: left;
+        }
+      }
+
+      & .projects-item_sub {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $white-color;
+        text-align: center;
+        padding: 8px 0;
+        z-index: 2;
+
+        & li {
+          padding: 8px 0;
+        }
+
+        & li:nth-child(1) {
+          font-size: 24px;
+        }
+        & li:nth-child(2) {
+          font-size: 32px;
+          font-weight: 700;
+        }
+        & li:nth-child(3) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
 
 /******************* CONTACT , FOOTER *************************/
 

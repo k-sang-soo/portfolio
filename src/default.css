@@ -175,6 +175,7 @@ header .nav-icon {
   font-size: 72px;
   font-weight: 900;
   color: #ff5851;
+  letter-spacing: 0.12em;
 }
 
 .about .information .about-title::after {
@@ -263,6 +264,87 @@ header .nav-icon {
 }
 
 /******************* PROJECTS *************************/
+.projects {
+  padding: 200px 63px;
+  background: #f8f8f8;
+}
+
+.projects .projects-title {
+  font-size: 72px;
+  font-weight: 900;
+  color: #414a6b;
+  letter-spacing: 0.12em;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.projects .projects-list {
+  position: relative;
+}
+
+.projects .projects-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: #c1c1c1;
+}
+
+.projects .projects-list .projects-item {
+  position: relative;
+}
+
+.projects .projects-list .projects-item .projects-item_preview::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.projects .projects-list .projects-item .projects-item_preview a {
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+}
+
+.projects .projects-list .projects-item .projects-item_preview .item-right {
+  float: right;
+}
+
+.projects .projects-list .projects-item .projects-item_preview .item-left {
+  float: left;
+}
+
+.projects .projects-list .projects-item .projects-item_sub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #f8f8f8;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 2;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li {
+  padding: 8px 0;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+  font-size: 24px;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+  font-size: 16px;
+}
+
 /******************* CONTACT , FOOTER *************************/
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
