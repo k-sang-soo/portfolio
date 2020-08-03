@@ -162,7 +162,7 @@ header {
     }
 
     & .about-me {
-      font-size: 24px;
+      font-size: 18px;
 
       & li {
         padding-bottom: 16px;
@@ -171,23 +171,25 @@ header {
   }
 
   & .ability {
+    max-width: 1490px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(208px, 578px));
-    gap: 0 30px;
+    grid-template-columns: repeat(3, minmax(208px, 425px));
+    gap: 0 108px;
     text-align: center;
     justify-content: space-around;
 
     & > div {
-      padding: 64px 8px;
+      padding: 54px 8px;
       background: $white-color;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
     }
 
     & .ability-iconbox {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       margin: 0 auto;
-      font-size: 50px;
+      font-size: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -199,7 +201,7 @@ header {
     & .design-list,
     .publisher-list,
     .education-list {
-      font-size: 24px;
+      font-size: 18px;
 
       & li {
         padding-bottom: 16px;
@@ -208,9 +210,9 @@ header {
     & ul {
       padding-top: 32px;
       & .ability-sub {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
-        padding-bottom: 32px;
+        padding-bottom: 24px;
       }
     }
 
@@ -224,7 +226,7 @@ header {
     }
   }
 }
-
+/******************* ABOUT 끝*************************/
 /******************* PROJECTS *************************/
 .projects {
   padding: 200px 63px;
@@ -300,7 +302,7 @@ header {
     }
   }
 }
-
+/******************* PROJECTS 끝 *************************/
 /******************* CONTACT , FOOTER *************************/
 footer {
   padding: 32px 0;
@@ -353,7 +355,7 @@ footer {
     cursor: pointer;
   }
 }
-
+/******************* CONTACT , FOOTER 끝 *************************/
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
   header,
@@ -382,7 +384,8 @@ footer {
       }
     }
   }
-
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
   .main {
     padding-right: 0;
 
@@ -404,7 +407,8 @@ footer {
       }
     }
   }
-
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
   .about {
     padding: 0 28px;
 
@@ -456,8 +460,71 @@ footer {
       }
     }
   }
-}
+  /******************* ABOUT 끝*************************/
+  /******************* PROJECTS *************************/
+  .projects {
+    padding: 88px 28px;
 
+    & .projects-title {
+      font-size: 56px;
+      padding-bottom: 40px;
+    }
+
+    & .projects-list {
+      &::after {
+        width: 2px;
+      }
+
+      & .projects-item {
+        & .item-position {
+          max-width: 392px;
+
+          & img {
+            width: 100%;
+          }
+        }
+
+        & .projects-item_sub {
+          & li:nth-child(1) {
+            font-size: 18px;
+          }
+          & li:nth-child(2) {
+            font-size: 28px;
+          }
+          & li:nth-child(3) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 28px 0;
+    & .footer-sub {
+      font-size: 32px;
+      padding-bottom: 48px;
+    }
+    & .contact {
+      padding-bottom: 32px;
+      & .contact-title {
+        font-size: 56px;
+      }
+
+      & .information {
+        font-size: 18px;
+      }
+    }
+
+    & .copyright {
+      font-size: 11px;
+    }
+    & .fa-caret-up {
+      font-size: 56px;
+    }
+  }
+}
 /******************* 반응형 768px *************************/
 @media screen and (max-width: 768px) {
   header,

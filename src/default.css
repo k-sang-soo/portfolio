@@ -188,7 +188,7 @@ header .nav-icon {
 }
 
 .about .information .about-me {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .about .information .about-me li {
@@ -196,28 +196,30 @@ header .nav-icon {
 }
 
 .about .ability {
+  max-width: 1490px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(208px, 578px))[3];
-      grid-template-columns: repeat(3, minmax(208px, 578px));
-  gap: 0 30px;
+  -ms-grid-columns: (minmax(208px, 425px))[3];
+      grid-template-columns: repeat(3, minmax(208px, 425px));
+  gap: 0 108px;
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .about .ability > div {
-  padding: 64px 8px;
+  padding: 54px 8px;
   background: #f8f8f8;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
 }
 
 .about .ability .ability-iconbox {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,7 +238,7 @@ header .nav-icon {
 .about .ability .design-list,
 .about .ability .publisher-list,
 .about .ability .education-list {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .about .ability .design-list li,
@@ -250,9 +252,9 @@ header .nav-icon {
 }
 
 .about .ability ul .ability-sub {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 
 .about .ability .education-list .small-writing {
@@ -263,6 +265,7 @@ header .nav-icon {
   padding-bottom: 32px;
 }
 
+/******************* ABOUT 끝*************************/
 /******************* PROJECTS *************************/
 .projects {
   padding: 200px 63px;
@@ -345,6 +348,7 @@ header .nav-icon {
   font-size: 16px;
 }
 
+/******************* PROJECTS 끝 *************************/
 /******************* CONTACT , FOOTER *************************/
 footer {
   padding: 32px 0;
@@ -401,6 +405,7 @@ footer .fa-caret-up {
   cursor: pointer;
 }
 
+/******************* CONTACT , FOOTER 끝 *************************/
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
   header,
@@ -424,6 +429,8 @@ footer .fa-caret-up {
   header .nav li:nth-child(3) {
     padding-right: 3px;
   }
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
   .main {
     padding-right: 0;
   }
@@ -440,6 +447,8 @@ footer .fa-caret-up {
   .main .main-img img {
     opacity: 0.85;
   }
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
   .about {
     padding: 0 28px;
   }
@@ -480,6 +489,57 @@ footer .fa-caret-up {
   }
   .about .ability .education-list .small-writing:nth-of-type(4) {
     padding-bottom: 24px;
+  }
+  /******************* ABOUT 끝*************************/
+  /******************* PROJECTS *************************/
+  .projects {
+    padding: 88px 28px;
+  }
+  .projects .projects-title {
+    font-size: 56px;
+    padding-bottom: 40px;
+  }
+  .projects .projects-list::after {
+    width: 2px;
+  }
+  .projects .projects-list .projects-item .item-position {
+    max-width: 392px;
+  }
+  .projects .projects-list .projects-item .item-position img {
+    width: 100%;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+    font-size: 18px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+    font-size: 28px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+    font-size: 14px;
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 28px 0;
+  }
+  footer .footer-sub {
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+  footer .contact {
+    padding-bottom: 32px;
+  }
+  footer .contact .contact-title {
+    font-size: 56px;
+  }
+  footer .contact .information {
+    font-size: 18px;
+  }
+  footer .copyright {
+    font-size: 11px;
+  }
+  footer .fa-caret-up {
+    font-size: 56px;
   }
 }
 
