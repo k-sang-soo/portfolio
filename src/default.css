@@ -346,6 +346,61 @@ header .nav-icon {
 }
 
 /******************* CONTACT , FOOTER *************************/
+footer {
+  padding: 32px 0;
+  text-align: center;
+  background: #1c1b20;
+  color: #f8f8f8;
+}
+
+footer .footer-sub {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 64px;
+}
+
+footer .contact {
+  padding-bottom: 48px;
+}
+
+footer .contact .contact-title {
+  font-size: 72px;
+  font-weight: 900;
+  padding-bottom: 16px;
+  letter-spacing: 0.12em;
+}
+
+footer .contact .information {
+  font-size: 24px;
+}
+
+footer .contact .information > li {
+  padding-bottom: 16px;
+}
+
+footer .contact .information > li:nth-child(3) {
+  font-size: 32px;
+}
+
+footer .contact .information > li > a {
+  color: #f8f8f8;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+footer .fa-caret-up {
+  font-size: 64px;
+  position: absolute;
+  right: 63px;
+  -webkit-transform: translateY(-48px);
+          transform: translateY(-48px);
+  padding: 0 0.16em;
+  z-index: 1;
+  cursor: pointer;
+}
+
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
   header,
