@@ -252,9 +252,18 @@ header {
       left: 50%;
       background: $gray-color;
     }
-
+    & .item3 {
+      padding-bottom: 150px;
+    }
     & .projects-item {
       position: relative;
+      padding-top: 150px;
+      &:nth-child(3) {
+        & .projects-item_sub {
+          top: 40%;
+        }
+      }
+
       & .projects-item_preview {
         &::after {
           content: "";
@@ -278,7 +287,7 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%);
         background: $white-color;
         text-align: center;
         padding: 8px 0;
@@ -524,6 +533,7 @@ footer {
       font-size: 56px;
     }
   }
+  /******************* FOOTER, CONTACT 끝*************************/
 }
 /******************* 반응형 768px *************************/
 @media screen and (max-width: 768px) {
@@ -545,7 +555,8 @@ footer {
       font-size: 15px;
     }
   }
-
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
   .main {
     padding-right: 0;
 
@@ -577,7 +588,8 @@ footer {
       }
     }
   }
-
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
   .about {
     padding: 0 24px;
 
@@ -628,8 +640,61 @@ footer {
       }
     }
   }
-}
+  /******************* ABOUT 끝 *************************/
+  /******************* PROJECTS *************************/
+  & .projects {
+    padding: 120px 25px;
 
+    & .projects-title {
+      font-size: 48px;
+      padding-bottom: 32px;
+    }
+
+    & .projects-list {
+      & .item3 {
+        padding-bottom: 206px;
+      }
+      & .projects-item {
+        padding-top: 206px;
+        & .item-position {
+          max-width: 259px;
+        }
+        & .projects-item_sub {
+          & li:nth-child(1) {
+            font-size: 16px;
+          }
+          & li:nth-child(2) {
+            font-size: 24px;
+          }
+          & li:nth-child(3) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  /******************* PROJECTS 끝*************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 24px 0;
+    & .footer-sub {
+      font-size: 28px;
+      padding-bottom: 40px;
+    }
+    & .contact {
+      & .contact-title {
+        font-size: 48px;
+      }
+      & .information {
+        font-size: 14px;
+      }
+    }
+    & .fa-caret-up {
+      font-size: 48px;
+      transform: translateY(-40px);
+    }
+  }
+}
 /******************* 모바일 반응형 480px *************************/
 @media screen and (max-width: 480px) {
   header,
