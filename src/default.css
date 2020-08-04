@@ -747,7 +747,6 @@ footer .fa-caret-up {
     right: 0;
     left: 0;
     height: 100vh;
-    padding-top: 161px;
     background: #f8f8f8;
     -webkit-transform: translate(-100%);
             transform: translate(-100%);
@@ -761,10 +760,13 @@ footer .fa-caret-up {
   }
   header .nav li {
     font-size: 32px;
-    padding: 0 0 16px 20px;
+    padding: 8px 20px;
+  }
+  header .nav li:nth-of-type(1) {
+    margin-top: 161px;
   }
   header .nav li:nth-of-type(4) {
-    padding-top: 15.2em;
+    margin-top: 14.2em;
   }
   header .nav li.responsive {
     display: block;

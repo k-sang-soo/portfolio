@@ -751,7 +751,6 @@ footer {
       right: 0;
       left: 0;
       height: 100vh;
-      padding-top: 161px;
       background: #f8f8f8;
       transform: translate(-100%);
       transition: all 500ms cubic-bezier(0.545, 0.005, 0.945, 0.585);
@@ -760,11 +759,15 @@ footer {
 
       & li {
         font-size: 32px;
-        padding: 0 0 16px 20px;
+        padding: 8px 20px;
+      }
+
+      & li:nth-of-type(1) {
+        margin-top: 161px;
       }
 
       & li:nth-of-type(4) {
-        padding-top: 15.2em;
+        margin-top: 14.2em;
       }
 
       & li.responsive {
