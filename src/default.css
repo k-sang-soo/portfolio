@@ -117,7 +117,7 @@ header .nav-icon {
   color: #f8f8f8;
   position: absolute;
   right: -15px;
-  bottom: 68px;
+  bottom: 80px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
 }
@@ -126,7 +126,7 @@ header .nav-icon {
   color: #f8f8f8;
   position: absolute;
   right: 8px;
-  bottom: 20px;
+  bottom: 40px;
   -webkit-animation: arrow-down 1s infinite linear;
           animation: arrow-down 1s infinite linear;
 }
@@ -151,7 +151,7 @@ header .nav-icon {
     bottom: 20px;
   }
   to {
-    bottom: 0px;
+    bottom: 10px;
   }
 }
 
@@ -160,7 +160,7 @@ header .nav-icon {
     bottom: 20px;
   }
   to {
-    bottom: 0px;
+    bottom: 10px;
   }
 }
 
