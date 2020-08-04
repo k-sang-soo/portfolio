@@ -694,6 +694,7 @@ footer {
       transform: translateY(-40px);
     }
   }
+  /******************* FOOTER, CONTACT 끝 *************************/
 }
 /******************* 모바일 반응형 480px *************************/
 @media screen and (max-width: 480px) {
@@ -702,6 +703,7 @@ footer {
     padding: 0 20px;
   }
 
+  /******************* HEADER *************************/
   header {
     align-items: center;
     padding-top: 20px;
@@ -803,7 +805,8 @@ footer {
       }
     }
   }
-
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
   .main {
     padding: 0;
     flex-direction: column;
@@ -829,7 +832,8 @@ footer {
       width: 100%;
     }
   }
-
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
   & .about {
     padding: 20px 0;
     & .information {
@@ -852,6 +856,103 @@ footer {
     & .ability {
       grid-template-columns: repeat(1, minmax(208px, 232px));
       gap: 56px 0;
+
+      & .design-list,
+      .publisher-list,
+      .education-list {
+        font-size: 12px;
+        padding-top: 24px;
+
+        & .ability-sub {
+          font-size: 18px;
+        }
+      }
+
+      & .ability-iconbox {
+        font-size: 22px;
+      }
+    }
+  }
+  /******************* ABOUT 끝 *************************/
+  /******************* PROJECTS *************************/
+  & .projects {
+    padding: 78px 20px;
+
+    & .projects-title {
+      font-size: 32px;
+      padding-bottom: 16px;
+    }
+
+    & .projects-list {
+      & .projects-item {
+        padding-top: 146px;
+
+        &:nth-child(3) {
+          padding-bottom: 146px;
+          & .projects-item_sub {
+            top: 35%;
+          }
+        }
+
+        & .item-position {
+          max-width: 152px;
+        }
+
+        & .projects-item_sub {
+          transform: none;
+          & li:nth-child(1) {
+            font-size: 12px;
+          }
+          & li:nth-child(2) {
+            font-size: 18px;
+          }
+          & li:nth-child(3) {
+            font-size: 10px;
+          }
+        }
+
+        & .sub-left {
+          left: 0;
+        }
+
+        & .sub-right {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 18px 0;
+
+    & .footer-sub {
+      font-size: 24px;
+      padding-bottom: 24px;
+    }
+
+    & .contact {
+      padding-bottom: 28px;
+      & .contact-title {
+        font-size: 40px;
+      }
+
+      & .information {
+        font-size: 12px;
+
+        & li:nth-child(3) {
+          font-size: 28px;
+        }
+      }
+    }
+    & .copyright {
+      font-size: 10px;
+    }
+    & .fa-caret-up {
+      font-size: 40px;
+      transform: translateY(-32px);
+      right: 0;
     }
   }
 }

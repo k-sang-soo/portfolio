@@ -690,6 +690,7 @@ footer .fa-caret-up {
     -webkit-transform: translateY(-40px);
             transform: translateY(-40px);
   }
+  /******************* FOOTER, CONTACT 끝 *************************/
 }
 
 /******************* 모바일 반응형 480px *************************/
@@ -698,6 +699,7 @@ footer .fa-caret-up {
   footer {
     padding: 0 20px;
   }
+  /******************* HEADER *************************/
   header {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -798,6 +800,8 @@ footer .fa-caret-up {
     -webkit-transform: rotate(-45deg) translate(10%, -50%);
             transform: rotate(-45deg) translate(10%, -50%);
   }
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
   .main {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -823,6 +827,8 @@ footer .fa-caret-up {
   .main .main-img {
     width: 100%;
   }
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
   .about {
     padding: 20px 0;
   }
@@ -844,6 +850,91 @@ footer .fa-caret-up {
     -ms-grid-columns: (minmax(208px, 232px))[1];
         grid-template-columns: repeat(1, minmax(208px, 232px));
     gap: 56px 0;
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 12px;
+    padding-top: 24px;
+  }
+  .about .ability .design-list .ability-sub,
+  .about .ability .publisher-list .ability-sub,
+  .about .ability .education-list .ability-sub {
+    font-size: 18px;
+  }
+  .about .ability .ability-iconbox {
+    font-size: 22px;
+  }
+  /******************* ABOUT 끝 *************************/
+  /******************* PROJECTS *************************/
+  .projects {
+    padding: 78px 20px;
+  }
+  .projects .projects-title {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+  .projects .projects-list .projects-item {
+    padding-top: 146px;
+  }
+  .projects .projects-list .projects-item:nth-child(3) {
+    padding-bottom: 146px;
+  }
+  .projects .projects-list .projects-item:nth-child(3) .projects-item_sub {
+    top: 35%;
+  }
+  .projects .projects-list .projects-item .item-position {
+    max-width: 152px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+    font-size: 12px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+    font-size: 18px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+    font-size: 10px;
+  }
+  .projects .projects-list .projects-item .sub-left {
+    left: 0;
+  }
+  .projects .projects-list .projects-item .sub-right {
+    right: 0;
+    left: auto;
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 18px 0;
+  }
+  footer .footer-sub {
+    font-size: 24px;
+    padding-bottom: 24px;
+  }
+  footer .contact {
+    padding-bottom: 28px;
+  }
+  footer .contact .contact-title {
+    font-size: 40px;
+  }
+  footer .contact .information {
+    font-size: 12px;
+  }
+  footer .contact .information li:nth-child(3) {
+    font-size: 28px;
+  }
+  footer .copyright {
+    font-size: 10px;
+  }
+  footer .fa-caret-up {
+    font-size: 40px;
+    -webkit-transform: translateY(-32px);
+            transform: translateY(-32px);
+    right: 0;
   }
 }
 /*# sourceMappingURL=default.css.map */
