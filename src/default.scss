@@ -270,7 +270,8 @@ header {
           display: block;
           clear: both;
         }
-        & a {
+        & .item-position {
+          width: 30vw;
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
         }
 
@@ -486,8 +487,6 @@ footer {
 
       & .projects-item {
         & .item-position {
-          max-width: 392px;
-
           & img {
             width: 100%;
           }
@@ -535,6 +534,7 @@ footer {
   }
   /******************* FOOTER, CONTACT 끝*************************/
 }
+
 /******************* 반응형 768px *************************/
 @media screen and (max-width: 768px) {
   header,
@@ -564,7 +564,11 @@ footer {
       padding-top: 185px;
 
       & p:nth-child(1) {
-        font-size: 64px;
+        font-size: 8.5vw;
+      }
+
+      & p:nth-child(2) {
+        font-size: 16px;
       }
 
       & span {
@@ -656,9 +660,7 @@ footer {
       }
       & .projects-item {
         padding-top: 206px;
-        & .item-position {
-          max-width: 259px;
-        }
+
         & .projects-item_sub {
           & li:nth-child(1) {
             font-size: 16px;
@@ -695,6 +697,32 @@ footer {
     }
   }
   /******************* FOOTER, CONTACT 끝 *************************/
+}
+
+@media screen and (max-width: 740px) {
+  .about {
+    .ability {
+      grid-template-columns: repeat(1, minmax(208px, 100%));
+      gap: 24px 0;
+
+      & div {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 32px 8px;
+      }
+
+      & .design-list,
+      .publisher-list,
+      .education-list {
+        width: 210px;
+      }
+
+      & .ability-iconbox {
+        margin: 0;
+      }
+    }
+  }
 }
 /******************* 모바일 반응형 480px *************************/
 @media screen and (max-width: 480px) {
@@ -816,7 +844,7 @@ footer {
       padding-left: 20px;
       padding-right: 20px;
       & p:nth-child(1) {
-        font-size: 30px;
+        font-size: 28px;
       }
 
       & p:nth-child(2) {
@@ -862,14 +890,21 @@ footer {
       .education-list {
         font-size: 12px;
         padding-top: 24px;
+        width: auto;
 
         & .ability-sub {
           font-size: 18px;
         }
       }
 
+      & div {
+        display: block;
+        padding: 28px 4px;
+      }
+
       & .ability-iconbox {
         font-size: 22px;
+        margin: 0 auto;
       }
     }
   }
@@ -894,8 +929,10 @@ footer {
           }
         }
 
-        & .item-position {
-          max-width: 152px;
+        & .projects-item_preview {
+          & .item-position {
+            width: 40vw;
+          }
         }
 
         & .projects-item_sub {
@@ -935,7 +972,7 @@ footer {
     & .contact {
       padding-bottom: 28px;
       & .contact-title {
-        font-size: 40px;
+        font-size: 32px;
       }
 
       & .information {
