@@ -33,6 +33,11 @@ a {
   text-decoration: none;
 }
 
+a[href^="tel"] {
+  color: #1c1b20;
+  text-decoration: none;
+}
+
 /******************* HEADER *************************/
 header {
   padding-top: 20px;
@@ -764,9 +769,6 @@ footer .fa-caret-up {
   header .nav li.responsive {
     display: block;
     font-size: 14px;
-  }
-  header .nav li.responsive a {
-    color: #1c1b20;
   }
   header .nav li.responsive i.fa-github {
     font-size: 20px;

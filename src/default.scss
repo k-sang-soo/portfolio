@@ -37,6 +37,11 @@ a {
   text-decoration: none;
 }
 
+a[href^="tel"] {
+  color: $black-color;
+  text-decoration: none;
+}
+
 /******************* HEADER *************************/
 
 header {
@@ -765,10 +770,6 @@ footer {
       & li.responsive {
         display: block;
         font-size: 14px;
-
-        & a {
-          color: $black-color;
-        }
 
         & i.fa-github {
           font-size: 20px;
