@@ -765,6 +765,9 @@ footer .fa-caret-up {
     display: block;
     font-size: 14px;
   }
+  header .nav li.responsive a {
+    color: #1c1b20;
+  }
   header .nav li.responsive i.fa-github {
     font-size: 20px;
     padding: 0.25rem;
