@@ -67,15 +67,34 @@ header .nav {
 }
 
 header .nav li {
-  padding: 0 2.1666em 0 2.1666em;
+  padding: 0 19px 0 19px;
   cursor: pointer;
+}
+
+header .nav .nav-hover {
+  overflow: hidden;
+}
+
+header .nav .nav-hover:hover::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+header .nav .nav-hover::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #ff935e;
+  -webkit-transform: translateX(-140%);
+          transform: translateX(-140%);
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 header .nav li:nth-child(3) {
   padding-right: 20px;
 }
 
-header .nav .responsive {
+header .nav .nav-contact {
   display: none;
 }
 
@@ -95,20 +114,31 @@ header .nav-icon {
 
 .main .main-title {
   width: 50%;
-  max-height: 100vh;
+  max-height: 95vh;
   padding-top: 240px;
   z-index: 99;
   position: relative;
+}
+
+.main .main-title p {
+  -webkit-animation: main-title-move 500ms linear forwards;
+          animation: main-title-move 500ms linear forwards;
 }
 
 .main .main-title p:nth-child(1) {
   font-size: 72px;
   font-weight: 700;
   white-space: nowrap;
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  opacity: 0;
 }
 
 .main .main-title p:nth-child(2) {
   font-size: 18px;
+  opacity: 0;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 
 .main .main-title .scroll-title {
@@ -127,13 +157,15 @@ header .nav-icon {
   position: absolute;
   right: 8px;
   bottom: 40px;
-  -webkit-animation: arrow-down 1s infinite linear;
-          animation: arrow-down 1s infinite linear;
+  -webkit-animation: arrow-down 1s infinite linear alternate;
+          animation: arrow-down 1s infinite linear alternate;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .main .main-img {
   width: 50%;
-  max-height: 100vh;
+  max-height: 95vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,21 +178,37 @@ header .nav-icon {
           align-items: flex-end;
 }
 
+@-webkit-keyframes main-title-move {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes main-title-move {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes arrow-down {
   form {
-    bottom: 20px;
+    bottom: 2%;
   }
   to {
-    bottom: 10px;
+    bottom: 1%;
   }
 }
 
 @keyframes arrow-down {
   form {
-    bottom: 20px;
+    bottom: 2%;
   }
   to {
-    bottom: 10px;
+    bottom: 1%;
   }
 }
 
@@ -421,6 +469,12 @@ footer .fa-caret-up {
 }
 
 /******************* CONTACT , FOOTER 끝 *************************/
+@media screen and (min-width: 1920px) {
+  header .nav li {
+    margin: 0 19px 0 19px;
+  }
+}
+
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
   header,
@@ -439,7 +493,8 @@ footer .fa-caret-up {
     font-size: 16px;
   }
   header .nav li {
-    padding: 0 1.08em 0 1.08em;
+    padding: 0 8px 0 8px;
+    margin: 0 8px 0 8px;
   }
   header .nav li:nth-child(3) {
     padding-right: 3px;
@@ -556,6 +611,12 @@ footer .fa-caret-up {
   /******************* FOOTER, CONTACT 끝*************************/
 }
 
+@media screen and (max-device-width: 800px) {
+  .main .main-title {
+    max-height: 100vh;
+  }
+}
+
 /******************* 반응형 768px *************************/
 @media screen and (max-width: 768px) {
   header,
@@ -581,6 +642,7 @@ footer .fa-caret-up {
     padding-right: 0;
   }
   .main .main-title {
+    max-height: 100vh;
     padding-top: 185px;
   }
   .main .main-title p:nth-child(1) {
@@ -598,6 +660,9 @@ footer .fa-caret-up {
   }
   .main .main-title .fa-arrow-down {
     font-size: 16px;
+  }
+  .main .main-img {
+    max-height: 100vh;
   }
   .main .main-img img {
     height: 100%;
@@ -697,6 +762,12 @@ footer .fa-caret-up {
 }
 
 @media screen and (max-width: 740px) {
+  .main .main-title {
+    max-height: 100vh;
+  }
+  .main .main-img {
+    max-height: 100vh;
+  }
   .about .ability {
     -ms-grid-columns: (minmax(208px, 100%))[1];
         grid-template-columns: repeat(1, minmax(208px, 100%));
@@ -741,6 +812,7 @@ footer .fa-caret-up {
     font-size: 16px;
   }
   header .nav {
+    display: inline-block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -758,21 +830,30 @@ footer .fa-caret-up {
             flex-direction: column;
     z-index: 998;
   }
+  header .nav .nav-contact {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+  }
   header .nav li {
     font-size: 32px;
-    padding: 8px 20px;
+    padding: 4px 16px;
+    display: inline-block;
   }
   header .nav li:nth-of-type(1) {
     margin-top: 161px;
   }
   header .nav li:nth-of-type(4) {
-    margin-top: 14.2em;
+    margin-top: 16.2em;
   }
-  header .nav li.responsive {
+  header .nav .nav-hover {
+    margin-right: 100%;
+  }
+  header .nav li.nav-contact_item {
     display: block;
     font-size: 14px;
   }
-  header .nav li.responsive i.fa-github {
+  header .nav li.nav-contact_item i.fa-github {
     font-size: 20px;
     padding: 0.25rem;
     color: #1c1b20;
@@ -844,6 +925,7 @@ footer .fa-caret-up {
   }
   .main .main-title {
     width: 100%;
+    max-height: 100vh;
     height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
@@ -858,6 +940,7 @@ footer .fa-caret-up {
     color: #1c1b20;
   }
   .main .main-img {
+    max-height: 100vh;
     width: 100%;
   }
   /******************* MAIN 끝 *************************/

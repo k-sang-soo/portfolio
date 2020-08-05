@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/f6c8b48b08.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="src/function.js"></script>
     <script type="text/javascript" src="src/common.js"></script>
   </head>
   <!----------------------- 시작 -------------------------->
@@ -21,16 +22,21 @@
     <header>
       <p class="logo">const my =</p>
       <ul class="nav">
-        <li>ABOUT</li>
-        <li>PROJECTS</li>
-        <li>CONTACT</li>
-        <li class="responsive">010 4059 6582</li>
-        <li class="responsive">wsckm1@gmail.com</li>
-        <li class="responsive">
-          <a href="https://github.com/k-sang-soo/portfolio.git" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
+        <li class="nav-hover">ABOUT</li>
+        <li class="nav-hover">PROJECTS</li>
+        <li class="nav-hover">CONTACT</li>
+        <ul class="nav-contact">
+          <li class="nav-contact_item">wsckm1@gmail.com</li>
+          <li class="nav-contact_item">010 4059 6582</li>
+          <li class="nav-contact_item">
+            <a
+              href="https://github.com/k-sang-soo/portfolio.git"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
       </ul>
       <div class="nav-icon">
         <div class="icons">
@@ -156,7 +162,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer class="footer">
       <p class="footer-sub">Thank you</p>
       <div class="contact">
         <p class="contact-title">CONTACT</p>

@@ -4,6 +4,7 @@ $coral-color: #ff5851;
 $white-color: #f8f8f8;
 $darkBlue-color: #414a6b;
 $gray-color: #c1c1c1;
+$atomicTangerine-color: #ff935e;
 
 /**********************초기화 코드 *****************/
 * {
@@ -60,15 +61,28 @@ header {
     z-index: 1;
 
     & li {
-      padding: 0 2.1666em 0 2.1666em;
+      padding: 0 19px 0 19px;
       cursor: pointer;
+    }
+    & .nav-hover {
+      overflow: hidden;
+      &:hover::after {
+        transform: translateX(0%);
+      }
+      &::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid $atomicTangerine-color;
+        transform: translateX(-140%);
+        transition: 500ms;
+      }
     }
 
     & li:nth-child(3) {
       padding-right: 20px;
     }
 
-    & .responsive {
+    & .nav-contact {
       display: none;
     }
   }
@@ -76,6 +90,7 @@ header {
     display: none;
   }
 }
+
 /******************* HEADER 끝*************************/
 
 /******************* MAIN *************************/
@@ -83,22 +98,29 @@ header {
   display: flex;
   background: $coral-color;
   padding-right: 0;
-
   & .main-title {
     width: 50%;
-    max-height: 100vh;
+    max-height: 95vh;
     padding-top: 240px;
     z-index: 99;
     position: relative;
+
+    & p {
+      animation: main-title-move 500ms linear forwards;
+    }
 
     & p:nth-child(1) {
       font-size: 72px;
       font-weight: 700;
       white-space: nowrap;
+      transform: translateX(-70px);
+      opacity: 0;
     }
 
     & p:nth-child(2) {
       font-size: 18px;
+      opacity: 0;
+      animation-delay: 600ms;
     }
 
     & .scroll-title {
@@ -116,13 +138,14 @@ header {
       position: absolute;
       right: 8px;
       bottom: 40px;
-      animation: arrow-down 1s infinite linear;
+      animation: arrow-down 1s infinite linear alternate;
+      animation-timing-function: ease-out;
     }
   }
 
   & .main-img {
     width: 50%;
-    max-height: 100vh;
+    max-height: 95vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -130,13 +153,20 @@ header {
   }
 }
 
+@keyframes main-title-move {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes arrow-down {
   form {
-    bottom: 20px;
+    bottom: 2%;
   }
 
   to {
-    bottom: 10px;
+    bottom: 1%;
   }
 }
 /******************* MAIN 끝*************************/
@@ -371,6 +401,15 @@ footer {
   }
 }
 /******************* CONTACT , FOOTER 끝 *************************/
+@media screen and (min-width: 1920px) {
+  header {
+    & .nav {
+      & li {
+        margin: 0 19px 0 19px;
+      }
+    }
+  }
+}
 /******************* 반응형 1280px *************************/
 @media screen and (max-width: 1919px) {
   header,
@@ -391,7 +430,8 @@ footer {
       font-size: 16px;
 
       & li {
-        padding: 0 1.08em 0 1.08em;
+        padding: 0 8px 0 8px;
+        margin: 0 8px 0 8px;
       }
 
       & li:nth-child(3) {
@@ -539,7 +579,13 @@ footer {
   }
   /******************* FOOTER, CONTACT 끝*************************/
 }
-
+@media screen and (max-device-width: 800px) {
+  .main {
+    & .main-title {
+      max-height: 100vh;
+    }
+  }
+}
 /******************* 반응형 768px *************************/
 @media screen and (max-width: 768px) {
   header,
@@ -564,8 +610,8 @@ footer {
   /******************* MAIN *************************/
   .main {
     padding-right: 0;
-
     & .main-title {
+      max-height: 100vh;
       padding-top: 185px;
 
       & p:nth-child(1) {
@@ -591,6 +637,7 @@ footer {
     }
 
     & .main-img {
+      max-height: 100vh;
       & img {
         height: 100%;
         object-fit: cover;
@@ -705,6 +752,15 @@ footer {
 }
 
 @media screen and (max-width: 740px) {
+  .main {
+    & .main-title {
+      max-height: 100vh;
+    }
+
+    & .main-img {
+      max-height: 100vh;
+    }
+  }
   .about {
     .ability {
       grid-template-columns: repeat(1, minmax(208px, 100%));
@@ -745,6 +801,7 @@ footer {
     }
 
     & .nav {
+      display: inline-block;
       position: fixed;
       top: 0;
       bottom: 0;
@@ -757,9 +814,16 @@ footer {
       flex-direction: column;
       z-index: 998;
 
+      & .nav-contact {
+        display: block;
+        position: absolute;
+        bottom: 8px;
+      }
+
       & li {
         font-size: 32px;
-        padding: 8px 20px;
+        padding: 4px 16px;
+        display: inline-block;
       }
 
       & li:nth-of-type(1) {
@@ -767,10 +831,14 @@ footer {
       }
 
       & li:nth-of-type(4) {
-        margin-top: 14.2em;
+        margin-top: 16.2em;
       }
 
-      & li.responsive {
+      & .nav-hover {
+        margin-right: 100%;
+      }
+
+      & li.nav-contact_item {
         display: block;
         font-size: 14px;
 
@@ -848,6 +916,7 @@ footer {
     flex-direction: column;
     & .main-title {
       width: 100%;
+      max-height: 100vh;
       height: 100vh;
       padding-left: 20px;
       padding-right: 20px;
@@ -865,6 +934,7 @@ footer {
     }
 
     & .main-img {
+      max-height: 100vh;
       width: 100%;
     }
   }
