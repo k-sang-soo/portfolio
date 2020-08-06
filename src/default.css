@@ -526,8 +526,8 @@ footer .fa-caret-up {
   padding: 0 0.16em;
   z-index: 1;
   cursor: pointer;
-  -webkit-animation: arrow-up 1s infinite alternate ease-out;
-          animation: arrow-up 1s infinite alternate ease-out;
+  -webkit-animation: arrow-up 500ms infinite alternate ease-out;
+          animation: arrow-up 500ms infinite alternate ease-out;
 }
 
 @-webkit-keyframes arrow-up {
