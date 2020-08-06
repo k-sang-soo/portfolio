@@ -1,8 +1,11 @@
 "use strict";
 window.addEventListener("load", () => {
+  const arrowTop = document.querySelector(".fa-caret-up");
   imgChange();
   navClickAnimaion();
-  moveTop();
   navClickMoveSection();
   projectsEffect();
+  arrowTop.addEventListener("click", () => {
+    scrollToTop();
+  });
 });

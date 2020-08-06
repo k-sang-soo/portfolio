@@ -87,14 +87,16 @@ function navClickMoveSection() {
   });
 }
 
-function moveTop() {
-  const arrowTop = document.querySelector(".fa-caret-up");
-  arrowTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
+function scrollToTop() {
+  const scroll = window.setInterval(function () {
+    const windowY = window.pageYOffset;
+    const stop = 50;
+    if (windowY > 0) {
+      window.scrollTo(0, windowY - stop);
+    } else {
+      window.clearInterval(scroll);
+    }
+  }, 10);
 }
 
 function projectsEffect() {
