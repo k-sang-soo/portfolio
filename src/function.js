@@ -14,6 +14,19 @@ let windowH;
   window.dispatchEvent(resize);
 })();
 
+function imgChange() {
+  const change = document.querySelector(".main-img > img");
+
+  change.addEventListener("mouseenter", () => {
+    /* eslint-disable */
+    change.setAttribute("src", "img/change2.jpg");
+  });
+  change.addEventListener("mouseleave", () => {
+    change.setAttribute("src", "img/me.jpg");
+  });
+  /* eslint-enable */
+}
+
 function navClickAnimaion() {
   const navIcon = document.querySelector(".nav-icon");
   const iconItems = document.querySelectorAll(".icons > div");
