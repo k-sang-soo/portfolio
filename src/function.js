@@ -16,14 +16,23 @@ let windowH;
 
 function imgChange() {
   const change = document.querySelector(".main-img > img");
+  const target = document.querySelector(".about");
+  /* eslint-disable */
+  if (document.body.clientWidth < 480) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > target.getBoundingClientRect().top) {
+        change.setAttribute("src", "img/change2.jpg");
+      }
+    });
+  } else {
+    change.addEventListener("mouseenter", () => {
+      change.setAttribute("src", "img/change2.jpg");
+    });
+    change.addEventListener("mouseleave", () => {
+      change.setAttribute("src", "img/me.jpg");
+    });
+  }
 
-  change.addEventListener("mouseenter", () => {
-    /* eslint-disable */
-    change.setAttribute("src", "img/change2.jpg");
-  });
-  change.addEventListener("mouseleave", () => {
-    change.setAttribute("src", "img/me.jpg");
-  });
   /* eslint-enable */
 }
 
