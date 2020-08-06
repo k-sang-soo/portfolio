@@ -14,6 +14,10 @@ let windowH;
   window.dispatchEvent(resize);
 })();
 
+function reload() {
+  window.scrollTo(0, 0);
+}
+
 function imgChange() {
   const change = document.querySelector(".main-img > img");
   const target = document.querySelector(".about");
