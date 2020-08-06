@@ -157,10 +157,8 @@ header .nav-icon {
   position: absolute;
   right: 8px;
   bottom: 40px;
-  -webkit-animation: arrow-down 1s infinite linear alternate;
-          animation: arrow-down 1s infinite linear alternate;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-animation: arrow-down 1s infinite ease-out alternate;
+          animation: arrow-down 1s infinite ease-out alternate;
 }
 
 .main .main-img {
@@ -346,6 +344,8 @@ header .nav-icon {
   height: 100%;
   top: 0;
   left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   background: #c1c1c1;
 }
 
@@ -372,6 +372,7 @@ header .nav-icon {
   width: 30vw;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .projects .projects-list .projects-item .projects-item_preview .item-right {
@@ -383,6 +384,16 @@ header .nav-icon {
 }
 
 .projects .projects-list .projects-item .projects-item_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -409,6 +420,54 @@ header .nav-icon {
 
 .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
   font-size: 16px;
+}
+
+.projects .projects-list .projects-item .sub-left::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #1c1b20;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.projects .projects-list .projects-item .sub-left.enter-effect::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.projects .projects-list .projects-item .sub-right::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #1c1b20;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.projects .projects-list .projects-item .sub-right.enter-effect::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 /******************* PROJECTS 끝 *************************/
@@ -459,13 +518,30 @@ footer .copyright {
 
 footer .fa-caret-up {
   font-size: 64px;
+  color: #f8f8f8;
   position: absolute;
   right: 63px;
-  -webkit-transform: translateY(-48px);
-          transform: translateY(-48px);
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
   padding: 0 0.16em;
   z-index: 1;
   cursor: pointer;
+  -webkit-animation: arrow-up 1s infinite alternate ease-out;
+          animation: arrow-up 1s infinite alternate ease-out;
+}
+
+@-webkit-keyframes arrow-up {
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+}
+
+@keyframes arrow-up {
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
 }
 
 /******************* CONTACT , FOOTER 끝 *************************/
@@ -738,6 +814,14 @@ footer .fa-caret-up {
   .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
     font-size: 12px;
   }
+  .projects .projects-list .projects-item .sub-left::after {
+    width: 10px;
+    height: 10px;
+  }
+  .projects .projects-list .projects-item .sub-right::after {
+    width: 10px;
+    height: 10px;
+  }
   /******************* PROJECTS 끝*************************/
   /******************* FOOTER, CONTACT *************************/
   footer {
@@ -1009,6 +1093,9 @@ footer .fa-caret-up {
     width: 40vw;
   }
   .projects .projects-list .projects-item .projects-item_sub {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transform: none;
             transform: none;
   }
@@ -1024,9 +1111,23 @@ footer .fa-caret-up {
   .projects .projects-list .projects-item .sub-left {
     left: 0;
   }
+  .projects .projects-list .projects-item .sub-left::after {
+    width: 8px;
+    height: 8px;
+    right: 0;
+    bottom: auto;
+    background: #414a6b;
+  }
   .projects .projects-list .projects-item .sub-right {
     right: 0;
     left: auto;
+  }
+  .projects .projects-list .projects-item .sub-right::after {
+    width: 8px;
+    height: 8px;
+    left: 0;
+    bottom: auto;
+    background: #414a6b;
   }
   /******************* PROJECTS 끝 *************************/
   /******************* FOOTER, CONTACT *************************/

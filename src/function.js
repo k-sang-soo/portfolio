@@ -74,3 +74,17 @@ function moveTop() {
     });
   });
 }
+
+function projectsEffect() {
+  const projectsItem = document.querySelectorAll(".item-position");
+  const effects = document.querySelectorAll(".projects-item_sub");
+  projectsItem.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      console.log(effects[index]);
+      effects[index].classList.add("enter-effect");
+    });
+    item.addEventListener("mouseleave", () => {
+      effects[index].classList.remove("enter-effect");
+    });
+  });
+}
