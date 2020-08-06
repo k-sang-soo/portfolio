@@ -436,9 +436,9 @@ footer {
     font-size: 64px;
     color: $white-color;
     position: absolute;
-    right: 63px;
+    right: 2vw;
     transform: translateY(-45px);
-    padding: 0 0.16em;
+    padding: 0 16px;
     z-index: 1;
     cursor: pointer;
     animation: arrow-up 500ms infinite alternate ease-out;
