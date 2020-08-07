@@ -14,10 +14,6 @@ let windowH;
   window.dispatchEvent(resize);
 })();
 
-function reload() {
-  window.scrollTo(0, 0);
-}
-
 function imgChange() {
   const change = document.querySelector(".main-img > img");
   const target = document.querySelector(".about");
@@ -62,8 +58,6 @@ function navClickMoveSection() {
   const contactTop = document.querySelector(".footer").getBoundingClientRect()
     .top;
 
-  console.log(aboutTop);
-
   [...nav].forEach((item, index) => {
     item.addEventListener("click", () => {
       switch (index) {
@@ -91,6 +85,50 @@ function navClickMoveSection() {
   });
 }
 
+function scrollEffEct(target, addClass, optTarget) {
+  const targets = document.querySelector(target);
+  const optTargets = document.querySelector(optTarget);
+  let winY;
+  window.addEventListener("scroll", () => {
+    let winY = window.pageYOffset;
+    let targetTop = targets.getBoundingClientRect().top;
+    // console.log("winY :", winY);
+    // console.log("scroll / 2 : ", winY / 2);
+    console.log("targetTop:", targetTop);
+    console.log("targetTop / 2:", targetTop / 2);
+    if (targetTop < winY / 2 && !optTargets.classList.contains(addClass)) {
+      console.log("스크롤");
+      optTargets.classList.add(addClass);
+    }
+  });
+}
+
+function scrollEffEct(target, addClass, optTarget) {
+  const targets = document.querySelector(target);
+  const optTargets = document.querySelector(optTarget);
+  let winY;
+  window.addEventListener("scroll", () => {
+    let winY = window.pageYOffset;
+    let targetTop = targets.getBoundingClientRect().top;
+    if (targetTop < winY / 2 && !optTargets.classList.contains(addClass)) {
+      optTargets.classList.add(addClass);
+    }
+  });
+}
+
+function scrollEffEctMobile(target, addClass, optTarget) {
+  const targets = document.querySelector(target);
+  const optTargets = document.querySelector(optTarget);
+  let winY;
+  window.addEventListener("scroll", () => {
+    let winY = window.pageYOffset;
+    let targetTop = targets.getBoundingClientRect().top;
+    if (targetTop < winY / 5 && !optTargets.classList.contains(addClass)) {
+      optTargets.classList.add(addClass);
+    }
+  });
+}
+
 function scrollToTop() {
   const scroll = window.setInterval(function () {
     const windowY = window.pageYOffset;
@@ -100,7 +138,7 @@ function scrollToTop() {
     } else {
       window.clearInterval(scroll);
     }
-  }, 10);
+  }, 5);
 }
 
 function projectsEffect() {

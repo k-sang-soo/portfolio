@@ -227,6 +227,17 @@ header .nav-icon {
   font-weight: 900;
   color: #ff5851;
   letter-spacing: 0.12em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.about .information .about-title.scroll-effect-about {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .about .information .about-title::after {
@@ -240,6 +251,15 @@ header .nav-icon {
 
 .about .information .about-me {
   font-size: 18px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.about .information .about-me.scroll-effect-about-me {
+  opacity: 1;
 }
 
 .about .information .about-me li {
@@ -330,6 +350,17 @@ header .nav-icon {
   letter-spacing: 0.12em;
   padding-bottom: 64px;
   text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.projects .projects-title.scroll-effect-projects {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .projects .projects-list {

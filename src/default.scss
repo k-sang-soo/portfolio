@@ -184,6 +184,14 @@ header {
       font-weight: 900;
       color: $coral-color;
       letter-spacing: 0.12em;
+      transition: 1s;
+      transform: translateY(50%);
+      opacity: 0;
+
+      &.scroll-effect-about {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
       &::after {
         content: "";
@@ -197,6 +205,13 @@ header {
 
     & .about-me {
       font-size: 18px;
+      opacity: 0;
+      transition: 1s;
+      transition-delay: 500ms;
+
+      &.scroll-effect-about-me {
+        opacity: 1;
+      }
 
       & li {
         padding-bottom: 16px;
@@ -272,6 +287,14 @@ header {
     letter-spacing: 0.12em;
     padding-bottom: 64px;
     text-align: center;
+    transition: 1s;
+    transform: translateY(50%);
+    opacity: 0;
+
+    &.scroll-effect-projects {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   & .projects-list {
