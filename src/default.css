@@ -1,0 +1,1161 @@
+@charset "UTF-8";
+/************************* 변수 ***********************/
+/**********************초기화 코드 *****************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  color: #1c1b20;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header,
+.main,
+footer {
+  padding: 0 63px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href^="tel"] {
+  color: #1c1b20;
+  text-decoration: none;
+}
+
+/******************* HEADER *************************/
+header {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+header .logo {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+header .nav {
+  font-weight: 700;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+header .nav li {
+  padding: 0 19px 0 19px;
+  cursor: pointer;
+}
+
+header .nav .nav-hover {
+  overflow: hidden;
+}
+
+header .nav .nav-hover:hover::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+header .nav .nav-hover::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #ff935e;
+  -webkit-transform: translateX(-140%);
+          transform: translateX(-140%);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+header .nav li:nth-child(3) {
+  padding-right: 20px;
+}
+
+header .nav .nav-contact {
+  display: none;
+}
+
+header .nav-icon {
+  display: none;
+}
+
+/******************* HEADER 끝*************************/
+/******************* MAIN *************************/
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ff5851;
+  padding-right: 0;
+}
+
+.main .main-title {
+  width: 50%;
+  max-height: 95vh;
+  padding-top: 240px;
+  z-index: 99;
+  position: relative;
+}
+
+.main .main-title p {
+  -webkit-animation: main-title-move 500ms linear forwards;
+          animation: main-title-move 500ms linear forwards;
+}
+
+.main .main-title p:nth-child(1) {
+  font-size: 72px;
+  font-weight: 700;
+  white-space: nowrap;
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  opacity: 0;
+}
+
+.main .main-title p:nth-child(2) {
+  font-size: 18px;
+  opacity: 0;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.main .main-title .scroll-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f8f8f8;
+  position: absolute;
+  right: -15px;
+  bottom: 80px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.main .main-title .fa-arrow-down {
+  color: #f8f8f8;
+  position: absolute;
+  right: 8px;
+  bottom: 40px;
+  -webkit-animation: arrow-down 1s infinite ease-out alternate;
+          animation: arrow-down 1s infinite ease-out alternate;
+}
+
+.main .main-img {
+  width: 50%;
+  max-height: 95vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@-webkit-keyframes main-title-move {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes main-title-move {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes arrow-down {
+  form {
+    bottom: 2%;
+  }
+  to {
+    bottom: 1%;
+  }
+}
+
+@keyframes arrow-down {
+  form {
+    bottom: 2%;
+  }
+  to {
+    bottom: 1%;
+  }
+}
+
+/******************* MAIN 끝*************************/
+/******************* ABOUT *************************/
+.about {
+  padding: 0 63px;
+  background: #f8f8f8;
+}
+
+.about .information {
+  text-align: center;
+  padding: 200px 0;
+}
+
+.about .information .about-title {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ff5851;
+  letter-spacing: 0.12em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.about .information .about-title.scroll-effect-about {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.about .information .about-title::after {
+  content: "";
+  display: block;
+  width: 208px;
+  height: 5px;
+  margin: 25px auto;
+  background: #ff5851;
+}
+
+.about .information .about-me {
+  font-size: 18px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.about .information .about-me.scroll-effect-about-me {
+  opacity: 1;
+}
+
+.about .information .about-me li {
+  padding-bottom: 16px;
+}
+
+.about .ability {
+  max-width: 1490px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(208px, 425px))[3];
+      grid-template-columns: repeat(3, minmax(208px, 425px));
+  gap: 0 108px;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about .ability div {
+  padding: 54px 8px;
+  background: #f8f8f8;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+}
+
+.about .ability .ability-iconbox {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f8f8f8;
+  border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.about .ability .design-list,
+.about .ability .publisher-list,
+.about .ability .education-list {
+  font-size: 18px;
+}
+
+.about .ability .design-list li,
+.about .ability .publisher-list li,
+.about .ability .education-list li {
+  padding-bottom: 16px;
+}
+
+.about .ability ul {
+  padding-top: 32px;
+}
+
+.about .ability ul .ability-sub {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+
+.about .ability .education-list .small-writing {
+  font-size: 16px;
+}
+
+.about .ability .education-list .small-writing:nth-of-type(4) {
+  padding-bottom: 32px;
+}
+
+/******************* ABOUT 끝*************************/
+/******************* PROJECTS *************************/
+.projects {
+  padding: 200px 63px;
+  background: #f8f8f8;
+}
+
+.projects .projects-title {
+  font-size: 72px;
+  font-weight: 900;
+  color: #414a6b;
+  letter-spacing: 0.12em;
+  padding-bottom: 64px;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.projects .projects-title.scroll-effect-projects {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.projects .projects-list {
+  position: relative;
+}
+
+.projects .projects-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: #c1c1c1;
+}
+
+.projects .projects-list .item3 {
+  padding-bottom: 150px;
+}
+
+.projects .projects-list .projects-item {
+  position: relative;
+  padding-top: 150px;
+}
+
+.projects .projects-list .projects-item:nth-child(3) .projects-item_sub {
+  top: 40%;
+}
+
+.projects .projects-list .projects-item .projects-item_preview::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.projects .projects-list .projects-item .projects-item_preview .item-position {
+  width: 30vw;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.projects .projects-list .projects-item .projects-item_preview .item-right {
+  float: right;
+}
+
+.projects .projects-list .projects-item .projects-item_preview .item-left {
+  float: left;
+}
+
+.projects .projects-list .projects-item .projects-item_sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: #f8f8f8;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 2;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li {
+  padding: 8px 0;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+  font-size: 24px;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+  font-size: 16px;
+}
+
+.projects .projects-list .projects-item .sub-left::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #1c1b20;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.projects .projects-list .projects-item .sub-left.enter-effect::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.projects .projects-list .projects-item .sub-right::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #1c1b20;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.projects .projects-list .projects-item .sub-right.enter-effect::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/******************* PROJECTS 끝 *************************/
+/******************* CONTACT , FOOTER *************************/
+footer {
+  padding: 32px 0;
+  text-align: center;
+  background: #1c1b20;
+  color: #f8f8f8;
+}
+
+footer .footer-sub {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 64px;
+}
+
+footer .contact {
+  padding-bottom: 48px;
+}
+
+footer .contact .contact-title {
+  font-size: 72px;
+  font-weight: 900;
+  padding-bottom: 16px;
+  letter-spacing: 0.12em;
+}
+
+footer .contact .information {
+  font-size: 24px;
+}
+
+footer .contact .information li {
+  padding-bottom: 16px;
+}
+
+footer .contact .information li:nth-child(3) {
+  font-size: 32px;
+}
+
+footer .contact .information li a {
+  color: #f8f8f8;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+footer .fa-caret-up {
+  font-size: 64px;
+  color: #f8f8f8;
+  position: absolute;
+  right: 2vw;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+  padding: 0 16px;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-animation: arrow-up 500ms infinite alternate ease-out;
+          animation: arrow-up 500ms infinite alternate ease-out;
+}
+
+@-webkit-keyframes arrow-up {
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+}
+
+@keyframes arrow-up {
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+}
+
+/******************* CONTACT , FOOTER 끝 *************************/
+@media screen and (min-width: 1920px) {
+  header .nav li {
+    margin: 0 19px 0 19px;
+  }
+}
+
+/******************* 반응형 1280px *************************/
+@media screen and (max-width: 1919px) {
+  header,
+  .main,
+  footer {
+    padding: 0 28px;
+  }
+  /******************* HEADER *************************/
+  header {
+    padding-top: 28px;
+  }
+  header .logo {
+    font-size: 28px;
+  }
+  header .nav {
+    font-size: 16px;
+  }
+  header .nav li {
+    padding: 0 8px 0 8px;
+    margin: 0 8px 0 8px;
+  }
+  header .nav li:nth-child(3) {
+    padding-right: 3px;
+  }
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
+  .main {
+    padding-right: 0;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 56px;
+  }
+  .main .main-title .scroll-title {
+    font-size: 20px;
+    right: -12px;
+  }
+  .main .main-img {
+    background: #fff;
+  }
+  .main .main-img img {
+    opacity: 0.85;
+  }
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
+  .about {
+    padding: 0 28px;
+  }
+  .about .information {
+    padding: 160px 0;
+  }
+  .about .information .about-title {
+    font-size: 56px;
+  }
+  .about .information .about-me {
+    font-size: 20px;
+  }
+  .about .ability {
+    -ms-grid-columns: (minmax(208px, 392px))[3];
+        grid-template-columns: repeat(3, minmax(208px, 392px));
+    gap: 0 25px;
+  }
+  .about .ability .ability-iconbox {
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 18px;
+  }
+  .about .ability .design-list li,
+  .about .ability .publisher-list li,
+  .about .ability .education-list li {
+    padding-bottom: 8px;
+  }
+  .about .ability ul .ability-sub {
+    font-size: 28px;
+  }
+  .about .ability .education-list .small-writing {
+    font-size: 14px;
+  }
+  .about .ability .education-list .small-writing:nth-of-type(4) {
+    padding-bottom: 24px;
+  }
+  /******************* ABOUT 끝*************************/
+  /******************* PROJECTS *************************/
+  .projects {
+    padding: 88px 28px;
+  }
+  .projects .projects-title {
+    font-size: 56px;
+    padding-bottom: 40px;
+  }
+  .projects .projects-list::after {
+    width: 2px;
+  }
+  .projects .projects-list .projects-item .item-position img {
+    width: 100%;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+    font-size: 18px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+    font-size: 28px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+    font-size: 14px;
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 28px 0;
+  }
+  footer .footer-sub {
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+  footer .contact {
+    padding-bottom: 32px;
+  }
+  footer .contact .contact-title {
+    font-size: 56px;
+  }
+  footer .contact .information {
+    font-size: 18px;
+  }
+  footer .copyright {
+    font-size: 11px;
+  }
+  footer .fa-caret-up {
+    font-size: 56px;
+  }
+  /******************* FOOTER, CONTACT 끝*************************/
+}
+
+@media screen and (max-device-width: 800px) {
+  header,
+  footer {
+    padding: 0 24px;
+  }
+  .main {
+    padding-left: 24px;
+  }
+  .main .main-title {
+    max-height: 100vh;
+  }
+  .main .main-img {
+    max-height: 100vh;
+  }
+  .main .main-img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header {
+    position: absolute;
+    width: 100%;
+    padding-top: 24px;
+  }
+  header .logo {
+    font-size: 24px;
+  }
+  header .nav li {
+    font-size: 15px;
+  }
+  .about {
+    padding: 0 24px;
+  }
+  .about .information {
+    padding: 140px 0;
+  }
+  .about .information .about-title {
+    font-size: 48px;
+  }
+  .about .information .about-title::after {
+    width: 160px;
+    height: 3px;
+    margin: 20px auto;
+  }
+  .about .information .about-me {
+    font-size: 18px;
+  }
+  .about .ability {
+    -ms-grid-columns: (minmax(208px, 100%))[1];
+        grid-template-columns: repeat(1, minmax(208px, 100%));
+    gap: 24px 0;
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 14px;
+    padding-top: 24px;
+    width: 210px;
+  }
+  .about .ability .design-list .ability-sub,
+  .about .ability .publisher-list .ability-sub,
+  .about .ability .education-list .ability-sub {
+    font-size: 22px;
+  }
+  .about .ability div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 16px 8px;
+  }
+  .about .ability .ability-iconbox {
+    width: 90px;
+    height: 90px;
+    font-size: 24px;
+    margin: 0;
+  }
+  .about .ability .education-list .small-writing {
+    font-size: 8px;
+  }
+  .projects {
+    padding: 120px 25px;
+  }
+  .projects .projects-title {
+    font-size: 48px;
+    padding-bottom: 32px;
+  }
+  .projects .projects-list .item3 {
+    padding-bottom: 206px;
+  }
+  .projects .projects-list .projects-item {
+    padding-top: 206px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+    font-size: 16px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+    font-size: 24px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(3) {
+    font-size: 12px;
+  }
+  .projects .projects-list .projects-item .sub-left::after {
+    width: 10px;
+    height: 10px;
+  }
+  .projects .projects-list .projects-item .sub-right::after {
+    width: 10px;
+    height: 10px;
+  }
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 24px 0;
+  }
+  footer .footer-sub {
+    font-size: 28px;
+    padding-bottom: 40px;
+  }
+  footer .contact .contact-title {
+    font-size: 48px;
+  }
+  footer .contact .information {
+    font-size: 14px;
+  }
+  footer .fa-caret-up {
+    font-size: 48px;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  /******************* FOOTER, CONTACT 끝 *************************/
+}
+
+/******************* 반응형 768px *************************/
+@media screen and (max-width: 768px) {
+  /******************* MAIN *************************/
+  .main {
+    padding-right: 0;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 8.5vw;
+  }
+  .main .main-title p:nth-child(2) {
+    font-size: 16px;
+  }
+  .main .main-title span {
+    color: #ff5851;
+  }
+  .main .main-title .scroll-title {
+    font-size: 16px;
+    right: -5px;
+  }
+  .main .main-title .fa-arrow-down {
+    font-size: 16px;
+  }
+  /******************* MAIN 끝 *************************/
+}
+
+/******************* 모바일 반응형 480px *************************/
+@media screen and (max-width: 480px) {
+  header,
+  footer {
+    padding: 0 20px;
+  }
+  /******************* HEADER *************************/
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 20px;
+  }
+  header .logo {
+    font-size: 16px;
+  }
+  header .nav {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background: #f8f8f8;
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+    -webkit-transition: all 500ms cubic-bezier(0.545, 0.005, 0.945, 0.585);
+    transition: all 500ms cubic-bezier(0.545, 0.005, 0.945, 0.585);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 998;
+  }
+  header .nav .nav-contact {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+  }
+  header .nav li {
+    font-size: 32px;
+    padding: 4px 16px;
+    display: inline-block;
+  }
+  header .nav li:nth-of-type(1) {
+    margin-top: 161px;
+  }
+  header .nav li:nth-of-type(4) {
+    margin-top: 16.2em;
+  }
+  header .nav .nav-hover {
+    margin-right: 100%;
+  }
+  header .nav li.nav-contact_item {
+    display: block;
+    font-size: 14px;
+  }
+  header .nav li.nav-contact_item i.fa-github {
+    font-size: 20px;
+    padding: 0.25rem;
+    color: #1c1b20;
+  }
+  header .nav.nav-view {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+  header .nav-icon {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  header .nav-icon .icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  header .nav-icon .icons div {
+    background: #1c1b20;
+    margin-bottom: 2px;
+  }
+  header .nav-icon .icons .icon-1 {
+    width: 26px;
+    height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  header .nav-icon .icons.icon-1.nav-view-ani {
+    -webkit-transform: rotate(45deg) translate(20%, 150%);
+            transform: rotate(45deg) translate(20%, 150%);
+  }
+  header .nav-icon .icons .icon-2 {
+    width: 18px;
+    height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  header .nav-icon .icons .icon-2.nav-view-ani {
+    width: 0;
+  }
+  header .nav-icon .icons .icon-3 {
+    width: 10px;
+    height: 3px;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  header .nav-icon .icons .icon-3.nav-view-ani {
+    width: 26px;
+    -webkit-transform: rotate(-45deg) translate(10%, -50%);
+            transform: rotate(-45deg) translate(10%, -50%);
+  }
+  /******************* HEADER 끝 *************************/
+  /******************* MAIN *************************/
+  .main {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .main-title {
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main .main-title p:nth-child(1) {
+    font-size: 28px;
+  }
+  .main .main-title p:nth-child(2) {
+    font-size: 12px;
+  }
+  .main .main-title span {
+    color: #1c1b20;
+  }
+  .main .main-img {
+    max-height: 100vh;
+    width: 100%;
+  }
+  /******************* MAIN 끝 *************************/
+  /******************* ABOUT *************************/
+  .about {
+    padding: 20px 0;
+  }
+  .about .information {
+    padding: 60px 0;
+  }
+  .about .information .about-title {
+    font-size: 32px;
+  }
+  .about .information .about-title::after {
+    width: 100px;
+    height: 2px;
+    margin: 12px auto;
+  }
+  .about .information .about-me {
+    font-size: 15px;
+  }
+  .about .ability {
+    -ms-grid-columns: (minmax(208px, 232px))[1];
+        grid-template-columns: repeat(1, minmax(208px, 232px));
+    gap: 56px 0;
+  }
+  .about .ability .design-list,
+  .about .ability .publisher-list,
+  .about .ability .education-list {
+    font-size: 12px;
+    padding-top: 24px;
+    width: auto;
+  }
+  .about .ability .design-list .ability-sub,
+  .about .ability .publisher-list .ability-sub,
+  .about .ability .education-list .ability-sub {
+    font-size: 18px;
+  }
+  .about .ability div {
+    display: block;
+    padding: 28px 4px;
+  }
+  .about .ability .ability-iconbox {
+    font-size: 22px;
+    margin: 0 auto;
+  }
+  /******************* ABOUT 끝 *************************/
+  /******************* PROJECTS *************************/
+  .projects {
+    padding: 78px 20px;
+  }
+  .projects .projects-title {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+  .projects .projects-list .projects-item {
+    padding-top: 146px;
+  }
+  .projects .projects-list .projects-item:nth-child(3) {
+    padding-bottom: 146px;
+  }
+  .projects .projects-list .projects-item:nth-child(3) .projects-item_sub {
+    top: 35%;
+  }
+  .projects .projects-list .projects-item .projects-item_preview .item-position {
+    width: 40vw;
+  }
+  .projects .projects-list .projects-item .projects-item_sub {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(1) {
+    font-size: 12px;
+  }
+  .projects .projects-list .projects-item .projects-item_sub li:nth-child(2) {
+    font-size: 18px;
+  }
+  .projects .projects-list .projects-item .sub-left {
+    left: 0;
+  }
+  .projects .projects-list .projects-item .sub-left::after {
+    width: 8px;
+    height: 8px;
+    right: 0;
+    bottom: auto;
+    background: #414a6b;
+  }
+  .projects .projects-list .projects-item .sub-right {
+    right: 0;
+    left: auto;
+  }
+  .projects .projects-list .projects-item .sub-right::after {
+    width: 8px;
+    height: 8px;
+    left: 0;
+    bottom: auto;
+    background: #414a6b;
+  }
+  /******************* PROJECTS 끝 *************************/
+  /******************* FOOTER, CONTACT *************************/
+  footer {
+    padding: 18px 0;
+  }
+  footer .footer-sub {
+    font-size: 24px;
+    padding-bottom: 24px;
+  }
+  footer .contact {
+    padding-bottom: 28px;
+  }
+  footer .contact .contact-title {
+    font-size: 32px;
+  }
+  footer .contact .information {
+    font-size: 12px;
+  }
+  footer .contact .information li:nth-child(3) {
+    font-size: 28px;
+  }
+  footer .copyright {
+    font-size: 10px;
+  }
+  footer .fa-caret-up {
+    font-size: 40px;
+    -webkit-transform: translateY(-32px);
+            transform: translateY(-32px);
+    right: 0;
+  }
+}
+/*# sourceMappingURL=default.css.map */
