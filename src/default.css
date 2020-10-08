@@ -975,7 +975,7 @@ footer .fa-caret-up {
     -webkit-transition: 500ms;
     transition: 500ms;
   }
-  header .nav-icon .icons.icon-1.nav-view-ani {
+  header .nav-icon .icons .icon-1.nav-view-ani {
     -webkit-transform: rotate(45deg) translate(20%, 150%);
             transform: rotate(45deg) translate(20%, 150%);
   }
